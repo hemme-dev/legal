@@ -33,53 +33,69 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p><strong>Effective date:</strong> 2026-08-15</p>
+
+    <p><strong>Effective date:</strong> 2026-08-30</p>
 
     <p>TravelBuddy respects your privacy. This Privacy Policy explains how we handle information when you use the TravelBuddy application.</p>
 
     <hr>
 
     <h2>1. Information We Collect</h2>
+
     <p>TravelBuddy can be used in two modes, which affect how data is stored:</p>
+
     <ul>
-        <li><strong>Local Mode (Anonymous)</strong>: If you do not sign in, all your travel data (places, points of interest, notes, and schedules) is stored <strong>exclusively on your device</strong> within your browser's local storage in a completely <strong>anonymous</strong> format, not linked to any personal identity. We do not collect or have access to this data. <strong>Exception:</strong> if you open a project that someone shared with you via a share link, the app connects to our cloud database to download the shared data. However, this access is strictly read-only: you cannot modify the original cloud project. Any changes you make to the shared project will only be saved locally on your device as a personal copy.</li>
+        <li><strong>Local Mode (Anonymous)</strong>: If you do not sign in, all your travel data (places, points of interest, notes, and schedules) is stored <strong>exclusively on your device</strong> within your browser's local storage in a completely <strong>anonymous</strong> format, not linked to any personal identity. We do not collect or have access to this data. <strong>Exception:</strong> if you open a project that someone shared with you via a share link, the app connects to our cloud database to download the shared data. However, this access is strictly read-only: you cannot modify the original cloud project. Any changes you make to the shared project will only be saved locally on your device as a personal copy. A second exception applies to the optional AI features: if you use them, a complete snapshot of the current project (project name, places, points of interest, notes, and time filters) together with your free-text request is sent directly from your browser to the third-party AI provider you have configured, authenticated with your own API key (see "Third-Party Services"). These requests do not pass through any server operated by us.</li>
         <li><strong>Cloud Mode (Authenticated)</strong>: If you choose to sign in using your Google account to enable cloud sync and real-time collaboration, Google provides TravelBuddy with your basic profile information (email address and display name) as part of the authentication process. This information is processed by Google via Firebase Authentication, which manages your sign-in session. <strong>Your email address and display name are never saved in your travel projects and are never used for marketing, profiling, or any promotional purpose</strong>: travel projects are associated only with an anonymous, internal Firebase User ID (<code>uid</code>). Your email and display name are shown on-screen within the app for your convenience (e.g., to confirm you are signed in). <strong>The only exception is a dedicated system log (the "EULA acceptance record")</strong>: when you accept the End User License Agreement (EULA) while signed in, we record your email address, your <code>uid</code>, the EULA version accepted, the acceptance timestamp, and your browser's user agent. This record is used <strong>exclusively</strong> to prove your acceptance of the terms in the event of legal disputes; it is never used for marketing or profiling. In accordance with Article 17(3)(e) of the GDPR, it is retained only for the applicable statutory limitation period for legal claims (currently 10 years under Italian Civil Code, Art. 2946), unless a longer retention is required to handle pending disputes, and is deleted once such period has expired. In this mode, your travel project data is stored in our cloud database (Firebase Firestore) to allow synchronization across your devices and with collaborators. For details on how project data is stored, see "Data Storage Format" below.</li>
     </ul>
+
     <p>Additionally, certain basic diagnostic and usage data (such as browser type or operating system) may be collected automatically in an <strong>anonymous and aggregated</strong> form by our hosting and backend providers to ensure the app's reliability and performance. This data cannot be used to identify you personally.</p>
 
     <h3>Data Storage Format</h3>
-    <p>Travel project data is stored in Firebase Firestore as plain (unencrypted) JSON documents. Google encrypts data in transit and at rest at the infrastructure level, but project contents are not end-to-end encrypted and are not encrypted by the app before upload. In addition, projects shared via a share link can be viewed and edited by anyone in possession of the link (including people who have not signed in): treat share links as confidential and share them only with people you trust.</p>
+
+    <p>Travel project data is stored in Firebase Firestore as plain (unencrypted) JSON documents. Google encrypts data in transit and at rest at the infrastructure level, but project contents are not end-to-end encrypted and are not encrypted by the app before upload. In addition, projects shared via a share link can be viewed by anyone in possession of the link (including people who have not signed in), who can also save a personal copy of the project on their own device: treat share links as confidential and share them only with people you trust.</p>
 
     <h2>2. Location Data</h2>
+
     <p>TravelBuddy features a "Near Me" tool that uses your device's physical location (via GPS/browser geolocation) to sort points of interest based on your proximity.</p>
+
     <ul>
         <li>This location data is processed <strong>strictly locally</strong> on your device.</li>
         <li>We <strong>do not</strong> transmit, store, or share your GPS coordinates or location history on our servers.</li>
     </ul>
 
     <h2>3. Third-Party Services</h2>
+
     <p>TravelBuddy integrates with certain third-party services to provide its core functionality:</p>
+
     <ul>
         <li><strong>Firebase (by Google):</strong> Used for user authentication and cloud database storage (if Cloud Mode is active). Please refer to Google's privacy policy for details on their data handling.</li>
         <li><strong>Geocoding (OpenStreetMap Nominatim):</strong> When you search for a place by name, your search query is sent to the OpenStreetMap Nominatim service to convert it into geographic coordinates. These requests expose your search text and IP address to the Nominatim service. Geocoding responses may be cached locally on your device to improve performance and reduce repeated requests.</li>
         <li><strong>Map Providers:</strong> We use mapping tiles to display interactive maps. By default, we use <strong>OpenStreetMap</strong>. Users may also opt to provide their own <strong>MapTiler</strong> API key. Map tile network requests may expose your IP address to these map providers.</li>
+        <li><strong>AI Providers (optional, user-configured "Bring Your Own Key"):</strong> if you use the AI features ("Ask AI" or generating a project from a text prompt), your request — including a JSON snapshot of your project contents and your free text — is sent directly from your browser to the AI provider you configure (e.g., OpenAI, Anthropic, Google Gemini, Mistral, Groq, OpenRouter, Z.ai, or any custom OpenAI-compatible endpoint). These requests expose your prompt, your project contents, and your IP address to that provider, and are authenticated with your own API key, which is stored only in your browser's local storage. TravelBuddy does not operate any intermediary server for AI requests. If you configure a local model (e.g., Ollama), the request is sent only to your own device and does not leave it.</li>
     </ul>
 
     <h2>4. Local Storage and Cookies</h2>
+
     <p>TravelBuddy <strong>does not use tracking cookies</strong> for advertising purposes. We use your browser's local storage (<code>localStorage</code>) to save essential application state, including:</p>
+
     <ul>
         <li>Your local travel project data (when not using Cloud Sync).</li>
-        <li>Your selected map provider preference and API keys (e.g., MapTiler key).</li>
+        <li>Your selected map provider preference and API keys (e.g., MapTiler key) and, if you use the AI features, your chosen AI provider, model, and API key.</li>
         <li>Authentication state and session tokens (managed by Firebase).</li>
     </ul>
 
     <h2>5. Children's Privacy</h2>
+
     <p>We <strong>do not knowingly collect personal information</strong> from children under 14. If we discover that a child under 14 has provided us with personal information, we will delete it immediately.</p>
 
     <h2>6. Changes to This Privacy Policy</h2>
+
     <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date.</p>
 
     <h2>7. Contact Us</h2>
+
     <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a></p>
+
 </body>
 </html>
