@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Ejulu!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+            background-color: #fafafa;
+        }
+        h1, h2 {
+            color: #444;
+        }
+        h3 {
+            color: #444;
+            margin-bottom: 4px;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejulu! Support</h1>
+
+    <p><strong>Last updated:</strong> 2026-09-12</p>
+
+    <p>Ejulu! is a private location-sharing app for trusted circles: it shares a member's position only when needed, with no continuous tracking and no location history. This page mirrors the guide built into the app (menu &rarr; Help) and answers the most common questions. If you can't find your answer here, write to <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a>.</p>
+
+    <hr>
+
+    <h2>How Ejulu! works</h2>
+
+    <p>Ejulu! shares your location only when needed: no continuous tracking, no location history.</p>
+
+    <p>When a member sends you a request (a "ping"), your device captures your position and publishes it to the group in encrypted form. You can do the same at any time with "Send my location".</p>
+
+    <p>On the map you see each member's last position, with the relative time ("2 min ago"), the GPS accuracy circle and the battery level.</p>
+
+    <h2>Groups and QR code</h2>
+
+    <p>Whoever creates a group becomes its admin; other members join by scanning the QR code shown by a member, or by pasting the linking code.</p>
+
+    <p>The QR contains the key that decrypts the group's locations: show it in person, don't send it over chat, because anyone who receives it can read all shared locations.</p>
+
+    <p>If a member reinstalls the app or changes device, any member still enrolled can simply show the QR again.</p>
+
+    <h2>Requesting and sharing location</h2>
+
+    <p>You can request an updated location for a single member from the icon on their card, or for the whole group with "Update everyone".</p>
+
+    <p>With "Send my location" you immediately publish your position to the group you are currently viewing, encrypted with the group's key.</p>
+
+    <p>The device receiving a request answers on its own, even with the app closed, as long as location permissions allow it.</p>
+
+    <p>You can pause a group for 2, 4, 8 or 24 hours from the &#128263; icon on the home screen: while paused your device neither answers nor sends requests, and the group resumes on its own when the pause ends.</p>
+
+    <h2>Permissions and background location</h2>
+
+    <p>To answer requests with the app closed you need the "Always allow" location permission: the banner on the home screen takes you straight to the setting.</p>
+
+    <p>With "While in use" only, positions are shared only while the app is open.</p>
+
+    <p>Notifications alert you to location requests and to the approaching expiry of timed groups.</p>
+
+    <h2>Groups with expiry</h2>
+
+    <p>A group can have an expiry date: a countdown shows the days left, with alerts 24 hours and 2 hours before it expires.</p>
+
+    <p>At expiry the group locks reversibly: no more locations, requests or joins, until the admin extends it.</p>
+
+    <p>Extending an expired group resets the members: each one receives an invite to rejoin with one tap (or to ignore it). If nobody extends it within 7 days, the group is deleted with all its data.</p>
+
+    <h2>The group admin</h2>
+
+    <p>The admin (initially whoever created the group) can rename it, set or change the expiry, extend it and delete it.</p>
+
+    <p>To leave a group with other members, the admin must nominate a successor among the members: the role passes to the new admin in a single operation.</p>
+
+    <p>When the last member leaves, the group is deleted along with its locations.</p>
+
+    <h2>Privacy and security</h2>
+
+    <p>Locations are end-to-end encrypted (AES-256-GCM): the key is born on the members' devices and never passes through the server, which cannot read the coordinates.</p>
+
+    <p>The service keeps only temporal metadata (when a position was updated) and only each member's latest position: no movement history.</p>
+
+    <p>Other members only see your "visible name" (by default your first and last name initials), never your full name: you can customize it from the "Visible name" entry in the menu.</p>
+
+    <p>The full Privacy Policy is available <a href="./ejulu.html">here</a>.</p>
+
+    <h2>Troubleshooting</h2>
+
+    <p>"Unable to detect your GPS position": check that location services are on and set to high accuracy, that Ejulu! has at least the "While in use" permission, and that battery saver isn't limiting it; indoors, try near a window. The same message also appears when publishing fails due to no connection.</p>
+
+    <p>"Key not available on this device": you reinstalled the app or left the group; ask a member to show you the QR code again.</p>
+
+    <p>"Group expired": ask the admin to extend it.</p>
+
+    <p>If the app can't reach the service, check your network and retry from the error screen.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Does the admin see more than other members?</h3>
+    <p>No: being admin is only a management role (name, expiry, group deletion). Locations and data are the same for all members.</p>
+
+    <h3>Can I see where a member was yesterday?</h3>
+    <p>No: Ejulu! keeps no history, only the latest position published by each member.</p>
+
+    <h3>What happens if I uninstall the app?</h3>
+    <p>You lose the group keys stored on the device: to rejoin you need the QR code shown by a member.</p>
+
+    <h3>Why is the position sometimes inaccurate?</h3>
+    <p>It depends on the GPS signal: the circle around the marker shows the estimated accuracy at the time of the fix.</p>
+
+    <h2>Account deletion</h2>
+
+    <p>You can delete your account at any time directly in the app (profile menu &rarr; "Delete account"). To request deletion from outside the app (for example after uninstalling it), send an email to <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a> from the Google address you use to sign in, with subject "Account Deletion Request - Ejulu" (as specified in the Privacy Policy).</p>
+
+    <h2>Contact</h2>
+
+    <p>For any question or issue: <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a></p>
+
+</body>
+</html>
