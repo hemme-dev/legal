@@ -34,7 +34,7 @@
 <body>
     <h1>Privacy Policy</h1>
 
-    <p><strong>Effective date:</strong> 2026-09-02</p>
+    <p><strong>Effective date:</strong> 2026-09-12</p>
 
     <p>Ejulu! respects your privacy. Ejulu! is a private location-sharing app designed for trusted circles (families, travel groups, and close friends), built so that <strong>your location is end-to-end encrypted and can never be read by us or by our infrastructure providers</strong>: our servers only ever see encrypted data. This Privacy Policy explains what information is processed when you use the Ejulu! application and how it is handled.</p>
 
@@ -51,6 +51,7 @@
         <li><strong>Your private data (visible only to you):</strong> your <strong>email address</strong>, your <strong>full Google display name</strong>, and your <strong>push notification token</strong> (Firebase Cloud Messaging token) are stored in a private document that only you can read. The push token is used exclusively to deliver "location ping" notifications to your device.</li>
         <li><strong>Group data:</strong> for each group, we store the <strong>group name, the list of member IDs, the creator's ID, the creation date, and, for groups with an expiry, the expiry date</strong>. This metadata is readable by any authenticated Ejulu! user, because the app needs it to validate a linking code before joining; locations and ping metadata remain visible to group members only. The group ID is a long random identifier that acts as the admission token for the group.</li>
         <li><strong>Location request metadata (visible to group members):</strong> when a member of your trusted circle sends a "ping", we store a small record with <strong>who requested it, who it is addressed to, the time, and its status</strong>. This metadata does <strong>not</strong> contain any coordinates or location data.</li>
+        <li><strong>Terms of service acceptance records:</strong> when you accept the Terms of Service / License Agreement (EULA), we store a minimal record on Firestore (<code>eula_acceptances</code>) containing your user ID (<code>uid</code>), the accepted version identifier (<code>eulaVersion</code>), a server timestamp (<code>acceptedAt</code>), and the operating system platform (<code>platform</code>). This record contains no location, email, or personal identifiers other than your account ID. Purpose: contractual performance and legal compliance.</li>
         <li><strong>No analytics, no advertising:</strong> Ejulu! contains <strong>no analytics SDKs, no advertising, and no tracking of any kind</strong>. We do not profile you, and your data is never used for marketing purposes.</li>
     </ul>
 
@@ -94,6 +95,7 @@
         <li><strong>Timed groups:</strong> a group can optionally have an expiry date. When it expires, the group becomes read-only for a 7-day grace period: members can still read the stored positions, but nobody can join, share new ones, or send pings. If the creator renews the group, the other members are removed, their stored positions are deleted, and an invitation to rejoin is written to each of their private documents. If the grace period passes without renewal, an automated hourly job permanently deletes the group together with all its encrypted positions and ping metadata. Your position in an expired group is therefore retained for at most 7 days beyond the expiry date.</li>
         <li><strong>Ping metadata:</strong> request records are retained with the group until it is deleted.</li>
         <li><strong>Cryptographic keys:</strong> stored only on your device; uninstalling the app or leaving the group removes them.</li>
+        <li><strong>Terms of service acceptance records:</strong> stored upon explicit agreement and retained for <strong>10 years</strong> following account deletion, strictly for contractual accountability and legal defense under applicable statutes of limitation (Art. 7 GDPR).</li>
         <li><strong>Your account and profile:</strong> you can delete your account at any time directly in the app (profile menu → "Delete account"). This permanently removes your memberships and stored positions in all groups, your public profile and your private document, the encryption keys stored on your device, and your Firebase Authentication account, and revokes the Google sign-in consent. Groups you created that become empty as a result are deleted together with all their data. You may be asked to confirm your Google account to complete the deletion. To request deletion from outside the app (for example after uninstalling it), send an email to <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a> from the Google address you use to sign in, with subject "Account Deletion Request - Ejulu!".</li>
     </ul>
 
