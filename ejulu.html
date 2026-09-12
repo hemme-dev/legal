@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Ejulu</title>
+    <title>Privacy Policy | Ejulu!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,26 +36,27 @@
 
     <p><strong>Effective date:</strong> 2026-09-02</p>
 
-    <p>Ejulu respects your privacy. Ejulu is a private location-sharing app designed for trusted circles (families, travel groups, and close friends), built so that <strong>your location is end-to-end encrypted and can never be read by us or by our infrastructure providers</strong>: our servers only ever see encrypted data. This Privacy Policy explains what information is processed when you use the Ejulu application and how it is handled.</p>
+    <p>Ejulu! respects your privacy. Ejulu! is a private location-sharing app designed for trusted circles (families, travel groups, and close friends), built so that <strong>your location is end-to-end encrypted and can never be read by us or by our infrastructure providers</strong>: our servers only ever see encrypted data. This Privacy Policy explains what information is processed when you use the Ejulu! application and how it is handled.</p>
 
     <hr>
 
     <h2>1. Information We Collect</h2>
 
-    <p>You must sign in with your Google account to use Ejulu. There is no anonymous mode.</p>
+    <p>You must sign in with your Google account, or with your Apple ID on iOS (Sign in with Apple), to use Ejulu!. There is no anonymous mode.</p>
 
     <ul>
         <li><strong>Account information:</strong> When you sign in with Google, Google provides your <strong>email address, display name, and profile photo</strong> as part of the authentication process, managed by Firebase Authentication.</li>
-        <li><strong>Your profile (visible to other app users):</strong> a public profile document stores your <strong>display name, profile photo URL, and last activity time</strong> (<code>lastSeen</code>). This is visible to any authenticated Ejulu user and is required to show who the members of a group are.</li>
-        <li><strong>Your private data (visible only to you):</strong> your <strong>email address</strong> and your <strong>push notification token</strong> (Firebase Cloud Messaging token) are stored in a private document that only you can read. The push token is used exclusively to deliver "location ping" notifications to your device.</li>
-        <li><strong>Group data:</strong> for each group, we store the <strong>group name, the list of member IDs, the creator's ID, the creation date, and, for groups with an expiry, the expiry date</strong>. This metadata is readable by any authenticated Ejulu user, because the app needs it to validate a linking code before joining; locations and ping metadata remain visible to group members only. The group ID is a long random identifier that acts as the admission token for the group.</li>
+        <li><strong>Sign in with Apple (iOS only):</strong> when you use Sign in with Apple, Apple provides your <strong>name</strong> and, only if you choose to share it, an <strong>email address</strong> (either your real one or a private relay address). Apple does not provide a profile photo. This data is managed by Firebase Authentication like the Google one.</li>
+        <li><strong>Your profile (visible to other app users):</strong> a public profile document stores your <strong>visible name, profile photo URL, and last activity time</strong> (<code>lastSeen</code>). This is visible to any authenticated Ejulu! user and is required to show who the members of a group are. The visible name is <strong>never your full Google name</strong>: by default it is just the initials of your first and last name (e.g. "GR"), and you can replace it at any time with a custom name of your choice ("Visible name" in the app menu). Ping notifications also use this visible name only.</li>
+        <li><strong>Your private data (visible only to you):</strong> your <strong>email address</strong>, your <strong>full Google display name</strong>, and your <strong>push notification token</strong> (Firebase Cloud Messaging token) are stored in a private document that only you can read. The push token is used exclusively to deliver "location ping" notifications to your device.</li>
+        <li><strong>Group data:</strong> for each group, we store the <strong>group name, the list of member IDs, the creator's ID, the creation date, and, for groups with an expiry, the expiry date</strong>. This metadata is readable by any authenticated Ejulu! user, because the app needs it to validate a linking code before joining; locations and ping metadata remain visible to group members only. The group ID is a long random identifier that acts as the admission token for the group.</li>
         <li><strong>Location request metadata (visible to group members):</strong> when a member of your trusted circle sends a "ping", we store a small record with <strong>who requested it, who it is addressed to, the time, and its status</strong>. This metadata does <strong>not</strong> contain any coordinates or location data.</li>
-        <li><strong>No analytics, no advertising:</strong> Ejulu contains <strong>no analytics SDKs, no advertising, and no tracking of any kind</strong>. We do not profile you, and your data is never used for marketing purposes.</li>
+        <li><strong>No analytics, no advertising:</strong> Ejulu! contains <strong>no analytics SDKs, no advertising, and no tracking of any kind</strong>. We do not profile you, and your data is never used for marketing purposes.</li>
     </ul>
 
     <h2>2. Location Data and End-to-End Encryption</h2>
 
-    <p>Location is the core of Ejulu, and it is handled with end-to-end encryption:</p>
+    <p>Location is the core of Ejulu!, and it is handled with end-to-end encryption:</p>
 
     <ul>
         <li><strong>What a location record contains:</strong> your GPS coordinates, their accuracy, altitude, speed, <strong>your device battery level and charging state</strong>, the capture time, and what triggered the capture (manual refresh, app start, or a member's ping).</li>
@@ -67,16 +68,16 @@
 
     <h2>3. When Your Location Is Accessed</h2>
 
-    <p>Ejulu does <strong>not</strong> track you continuously. Your location is captured only in these moments, each time on demand: when you send your position from the app, when the app starts, when a member of your trusted circle sends you a "ping", and when you accept an invitation to rejoin a renewed group. Between these events, the app does not access the GPS.</p>
+    <p>Ejulu! does <strong>not</strong> track you continuously. Your location is captured only in these moments, each time on demand: when you send your position from the app, when the app starts, when a member of your trusted circle sends you a "ping", and when you accept an invitation to rejoin a renewed group. Between these events, the app does not access the GPS.</p>
 
     <ul>
-        <li>To answer pings <strong>while the app is closed</strong>, Ejulu asks for the "Allow all the time" location permission and a high-priority silent push notification wakes the app for a few seconds. This is optional: with "While using the app" only, your device responds to pings only while the app is open.</li>
+        <li>To answer pings <strong>while the app is closed</strong>, Ejulu! asks for the "Allow all the time" location permission and a high-priority silent push notification wakes the app for a few seconds. This is optional: with "While using the app" only, your device responds to pings only while the app is open.</li>
         <li><strong>Camera:</strong> the camera is used solely to scan the enrollment QR code. The camera stream is processed locally on your device; <strong>no images are captured, stored, or transmitted</strong>.</li>
     </ul>
 
     <h2>4. Third-Party Services</h2>
 
-    <p>Ejulu integrates with the following third-party services:</p>
+    <p>Ejulu! integrates with the following third-party services:</p>
 
     <ul>
         <li><strong>Firebase (by Google):</strong> used for authentication (Firebase Authentication), data storage (Cloud Firestore), push notifications (Firebase Cloud Messaging), and server-side automation (Cloud Functions). One function dispatches ping notifications, reading only group membership and push tokens to route them. Another renews expired groups: it removes the other members, deletes their stored positions, and writes a rejoin invitation. A scheduled hourly job permanently deletes expired groups after their grace period. These server-side components can delete stored locations as part of renewal and cleanup, but they <strong>never</strong> read or decrypt them, and never have access to the encryption key. Diagnostic data (such as device type or operating system) may be collected by these providers in an anonymous and aggregated form to ensure reliability and performance. Please refer to Google's privacy policy for details on their data handling.</li>
@@ -93,12 +94,12 @@
         <li><strong>Timed groups:</strong> a group can optionally have an expiry date. When it expires, the group becomes read-only for a 7-day grace period: members can still read the stored positions, but nobody can join, share new ones, or send pings. If the creator renews the group, the other members are removed, their stored positions are deleted, and an invitation to rejoin is written to each of their private documents. If the grace period passes without renewal, an automated hourly job permanently deletes the group together with all its encrypted positions and ping metadata. Your position in an expired group is therefore retained for at most 7 days beyond the expiry date.</li>
         <li><strong>Ping metadata:</strong> request records are retained with the group until it is deleted.</li>
         <li><strong>Cryptographic keys:</strong> stored only on your device; uninstalling the app or leaving the group removes them.</li>
-        <li><strong>Your account and profile:</strong> you can delete your account at any time directly in the app (profile menu → "Delete account"). This permanently removes your memberships and stored positions in all groups, your public profile and your private document, the encryption keys stored on your device, and your Firebase Authentication account, and revokes the Google sign-in consent. Groups you created that become empty as a result are deleted together with all their data. You may be asked to confirm your Google account to complete the deletion. To request deletion from outside the app (for example after uninstalling it), send an email to <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a> from the Google address you use to sign in, with subject "Account Deletion Request - Ejulu".</li>
+        <li><strong>Your account and profile:</strong> you can delete your account at any time directly in the app (profile menu → "Delete account"). This permanently removes your memberships and stored positions in all groups, your public profile and your private document, the encryption keys stored on your device, and your Firebase Authentication account, and revokes the Google sign-in consent. Groups you created that become empty as a result are deleted together with all their data. You may be asked to confirm your Google account to complete the deletion. To request deletion from outside the app (for example after uninstalling it), send an email to <a href="mailto:hemme.dev@gmail.com">hemme.dev@gmail.com</a> from the Google address you use to sign in, with subject "Account Deletion Request - Ejulu!".</li>
     </ul>
 
     <h2>6. Children's Privacy</h2>
 
-    <p>We <strong>do not knowingly collect personal information</strong> from children under 14. If we discover that a child under 14 has provided us with personal information, we will delete it immediately. Ejulu is intended for trusted circles and families: minors should use the app under the supervision and consent of a parent or guardian, who should carefully consider whether to enable continuous location sharing for the child.</p>
+    <p>We <strong>do not knowingly collect personal information</strong> from children under 14. If we discover that a child under 14 has provided us with personal information, we will delete it immediately. Ejulu! is intended for trusted circles and families: minors should use the app under the supervision and consent of a parent or guardian, who should carefully consider whether to enable continuous location sharing for the child.</p>
 
     <h2>7. Changes to This Privacy Policy</h2>
 
